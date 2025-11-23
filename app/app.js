@@ -13,5 +13,5 @@ app.get('/v1', (req, res) => {
 app.use('/v1', routerSort);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Started on port ${port}`);
 });
