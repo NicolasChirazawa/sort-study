@@ -1,3 +1,10 @@
+class invalidQuantity {
+    constructor (quantity) {
+        this.quantity = quantity;
+        this.exception = 'invalid_quantity';
+    }
+}
+
 class invalidAlgorithm {
     constructor (algorithmName) {
         this.algorithmName = algorithmName;
@@ -14,4 +21,4 @@ class incorrectSortedArray {
     }
 }
 
-module.exports = { invalidAlgorithm, incorrectSortedArray }
+module.exports = { invalidQuantity, invalidAlgorithm, incorrectSortedArray }

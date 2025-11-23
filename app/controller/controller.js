@@ -6,7 +6,11 @@ const generateRandomNumbersList = (req, res) => {
     
     const response = utils.generateRandomNumbersList(quantity, NUMBERS_LIST);
 
-    res.send(response);
+    if (response.exception) {
+        return res.status(400).send(response);
+    } else {
+        return res.status(200).send(response);
+    }
 };
 
 const getSortedArrayByAlgorithm = (req, res) => {

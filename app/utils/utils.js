@@ -2,13 +2,25 @@ const { randomInt } = require('node:crypto');
 
 const { bubbleSort, insertSort, selectSort, mergeSort, quickSort, bucketSort, countSort, radixSort, heapSort, verifySorts } = 
     require('./sort-study.js')
-const { invalidAlgorithm, incorrectSortedArray } = require('../error/error.js');
+const { invalidQuantity, invalidAlgorithm, incorrectSortedArray } = require('../error/error.js');
 
 function generateRandomNumbersList (quantity, NUMBERS_LIST) {
-    let lists = [];
+    try {
+        if (isNaN(Number(quantity)) === true || Number(quantity) <= 0) { 
+            throw new invalidQuantity(quantity) 
+        };
+    } catch (e) {
+        const destructException = Object.entries(e);
+        let response = {};
 
-    console.log(process.env.NUMBERS_LIST);
-    console.log(NUMBERS_LIST);
+        for (let i = 0; i < destructException.length; i++) {
+            response[`${destructException[i][0]}`] = `${destructException[i][1]}`;
+        }
+        
+        return response;
+    }
+
+    let lists = [];
 
     for (let i = 0; i < NUMBERS_LIST; i++) {
         let list = [];
