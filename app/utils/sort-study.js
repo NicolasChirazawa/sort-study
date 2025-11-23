@@ -23,23 +23,23 @@ function heapify (list, length, n) {
     }
 }
 
-function heapClean (list) {
-    let sortedArray = [];
-
-    while(list.length > 0) {
-        swap(list, 0, list.length - 1);
-        sortedArray[list.length - 1] = list.pop();
-        heapify(list, list.length, 0);
-    }
-
-    return sortedArray;
-}
-
 function resetArray () {
     const array = new Array(10);
 
     for (let i = 0; i < array.length; i++) { array[i] = [] };
     return array;
+}
+
+function verifySorts (list) {
+    let isArraySorted = true;
+    for (let i = 1; i < list; i++) {
+        if (list[i] < list[i - 1]) { 
+            isArraySorted = false; 
+            return isArraySorted;
+        }
+    };
+
+    return isArraySorted;
 }
 
 function bubbleSort (list) {
@@ -253,6 +253,14 @@ function heapSort (list) {
         heapify(list, list.length, i);
     }
 
-    let sortedArray = heapClean(list);
+    let sortedArray = [];
+
+    while(list.length > 0) {
+        swap(list, 0, list.length - 1);
+        sortedArray[list.length - 1] = list.pop();
+        heapify(list, list.length, 0);
+    }
     return sortedArray;
 }
+
+module.exports = { bubbleSort, insertSort, selectSort, mergeSort, quickSort, bucketSort, countSort, radixSort, heapSort, verifySorts }
