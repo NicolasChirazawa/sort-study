@@ -3,6 +3,6 @@
     "express": "^5.1.0"
   },
   "scripts": {
-    "start": "node --env-file=.env ./app/app.js"
+    "start": "node --env-file=.env ./backend/backend.js"
   }
 }
