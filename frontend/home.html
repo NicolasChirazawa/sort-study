@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="teste()">
+    <div id="ajuste">
+        <h1>Estudo</h1>
+        <h2>Sort de algoritmo</h2>
+    </div>
+    <h3 id="center">Diferentes meios, diferentes resultados...<br>Veja você mesmo o impacto dos algoritmos na ordenação!</h3>
+    <div id="principal">
+        <div id="subprincipal">
+            <input placeholder="Insira a quantidade de números" type="text" name="" id="left">
+            <input type="submit" value="Gerar lista" id="right">
+        </div>
+        <div id="subprincipal">
+            <textarea name="lista" id="lista"></textarea>
+            <div id="subsubprincipal">
+                <select name="cars" id="cars">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="insertSort">Insert Sort</option>
+                    <option value="selectSort">Select Sort</option>
+                    <option value="mergeSort">Merge Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                    <option value="bucketSort">Bucket Sort</option>
+                    <option value="countSort">Count Sort</option>
+                    <option value="radixSort">Radix Sort</option>
+                    <option value="heapSort">Heap Sort</option>
+                </select>
+                <input type="submit" value="Ordenar" id="ordenar">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
