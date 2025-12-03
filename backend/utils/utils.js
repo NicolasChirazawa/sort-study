@@ -1,13 +1,16 @@
 const { randomInt } = require('node:crypto');
 
 const { bubbleSort, insertSort, selectSort, mergeSort, quickSort, bucketSort, countSort, radixSort, heapSort, verifySorts } = 
-    require('./sort-study.js')
-const { invalidQuantity, invalidAlgorithm, incorrectSortedArray } = require('../error/error.js');
+    require('./sort-study.js');
 
-function generateRandomNumbersList (quantity, NUMBERS_LIST) {
+const { invalidNumberQuantity, invalidNumbersList, invalidAlgorithm, incorrectSortedArray } = require('../error/error.js');
+
+function generateRandomNumbersList (quantityNumber, quantityList) {
     try {
-        if (isNaN(Number(quantity)) === true || Number(quantity) <= 0) { 
-            throw new invalidQuantity(quantity) 
+        if (
+            isNaN(Number(quantityNumber)) === true || Number(quantityNumber) <= 0
+        ) { 
+            throw new invalidNumberQuantity(quantityNumber) 
         };
     } catch (e) {
         const destructException = Object.entries(e);
@@ -16,15 +19,30 @@ function generateRandomNumbersList (quantity, NUMBERS_LIST) {
         for (let i = 0; i < destructException.length; i++) {
             response[`${destructException[i][0]}`] = `${destructException[i][1]}`;
         }
-        
+        return response;
+    }
+
+    try {
+        if (
+            isNaN(Number(quantityList)) === true || Number(quantityList) <= 0
+        ) { 
+            throw new invalidNumbersList(quantityList) 
+        };
+    } catch (e) {
+        const destructException = Object.entries(e);
+        let response = {};
+
+        for (let i = 0; i < destructException.length; i++) {
+            response[`${destructException[i][0]}`] = `${destructException[i][1]}`;
+        }
         return response;
     }
 
     let lists = [];
 
-    for (let i = 0; i < NUMBERS_LIST; i++) {
+    for (let i = 0; i < quantityList; i++) {
         let list = [];
-        for (let i = 0; i < quantity; i++) {
+        for (let i = 0; i < quantityNumber; i++) {
             list.push(randomInt(1, 100000));
         }
         lists.push(list);
@@ -34,12 +52,12 @@ function generateRandomNumbersList (quantity, NUMBERS_LIST) {
     return response;
 }
 
-function getSortedArrayByAlgorithm (arrayLists, choosedAlgorithm, NUMBERS_LIST) {
+function getSortedArrayByAlgorithm (arrayLists, choosedAlgorithm) {
     let sortedTimes = [];
     let sortMedia = 0;
 
     try {
-        for (let i = 0; i < NUMBERS_LIST; i++) {
+        for (let i = 0; i < arrayLists.length; i++) {
             let sortedArray = []; 
             const start = performance.now();
 

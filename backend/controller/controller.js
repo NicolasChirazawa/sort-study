@@ -1,10 +1,10 @@
 const utils = require('../utils/utils.js')
 
 const generateRandomNumbersList = (req, res) => {
-    const NUMBERS_LIST = process.env.NUMBERS_LIST;
-    const quantity = req.params.quantity;
+    const quantityList = req.params.quantityList;
+    const quantityNumber = req.params.quantityNumber;
     
-    const response = utils.generateRandomNumbersList(quantity, NUMBERS_LIST);
+    const response = utils.generateRandomNumbersList(quantityNumber, quantityList);
 
     if (response.exception) {
         return res.status(Number(response.statusError)).send(response);
