@@ -66,7 +66,7 @@ div#principal {
   margin: 0 auto;
 }
 
-div#subprincipal {
+div.subprincipal {
   width: 80%;
 
   display: flex;
@@ -76,35 +76,17 @@ div#subprincipal {
   margin: 20px 0;
 }
 
-div#subprincipal > input#left {
-  width: 90%;
+div.subprincipal > input.elements {
+  width: 80%;
   height: 42px;
 
   font-size: 20px;
+
   padding: 3px 3px 3px 10px;
-
   border: 1px solid rgb(118, 118, 118);
-  border-right: 0;
 
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-div#subprincipal > input#right {
-  width: 25%;
-  height: 50px;
-  background-color: #161c1f;
-
-  font-size: 13px !important;
-
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-
-  border: 0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 10px;
+  margin: 0 5px;
 }
 
 input::placeholder {
@@ -123,11 +105,11 @@ option:first {
 }
 
 select {
-  font-size: 12px;
+  font-size: 15px;
   height: 30px;
   
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
+  margin-right: 5px;
 }
 
 textarea#lista {
@@ -137,21 +119,13 @@ textarea#lista {
   height: 100px;
   background-color: #fcfbfc;
 
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 10px;
+
+  margin-top: 10px;
 }
 
-div#subsubprincipal {
-  width: 40%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-
-  margin-left: 20px;
-}
-
-input#ordenar {
+input.button {
+  width: 75%;
   background-color: #161c1f;
 
   font-size: 13px !important;
@@ -160,8 +134,17 @@ input#ordenar {
   font-size: 15px;
   font-weight: bold;
 
-  padding: 5px 0;
-  border: 0;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+div#base {
+  background-color: white;
+
+  max-width: 700px;
+  border-radius: 20px;
+
+  margin: 0 auto;
 }
 
 #chart {
