@@ -69,6 +69,6 @@ npm start
 <h2 name="endpoint">📍 Endpoints API</h2>
 
 | rotas                                                          | descrição                              |
-| -------------------------------------------------------------- | :--------------------------------------:                                                      |
+| -------------------------------------------------------------- | :--------------------------------------:
 | `POST /v1/generateRandomNumbers/:quantityList/:quantityNumber` | Gerar lista de números aleatórios.     |
-| `POST /v1/sortLists/:algorithm_name`                           | Gerar performance de ordenação.        |
+| `POST /v1/sortLists/:algorithm_name`                           | Performar média de tempo da ordenação. |
