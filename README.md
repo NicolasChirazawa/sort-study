@@ -9,11 +9,11 @@
 </div>
 
 <h2 name="descricao">📚 Descrição</h2>
-Um estudo comparativo entre algortimos de ordenação de números.
+Um estudo performático, comparativo entre algortimos de ordenação de números.
 
 <h3>Funcionalidades</h3>
 <h4>Front-end:</h4>
-• Plotação de resultados num gráfico comparativo; <br>
+• Plotação de resultados num gráfico; <br>
 
 <h4>API:</h4>
 • Geração de 'x' lista de 'y' números pseudoaleatórios; <br>
@@ -31,7 +31,7 @@ Um estudo comparativo entre algortimos de ordenação de números.
 
 
 <h2 name="visual">🖥️ Front-end</h2>
-O projeto tem essa disposição visual: <br> <br>
+O projeto apresenta essa disposição visual: <br> <br>
 
 <img src="https://raw.githubusercontent.com/NicolasChirazawa/sort-study/refs/heads/main/imagens/Screenshot_1.png">
 
